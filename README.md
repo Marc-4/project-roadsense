@@ -1,36 +1,9 @@
 # RoadSense System
 
 An AI-powered road monitoring and violation tracking system using YOLO for vehicle detection and Laravel + React + MongoDB for real-time data logging and user interface.
-
 ---
 
-## 🚀 Tech Stack
-
-**Frontend**: React.js + Vite + MUI + Tailwind CSS  
-**Backend**: Laravel (PHP 8.4+) + MongoDB PHP Library  
-**Database**: MongoDB Atlas  
-**AI Model**: YOLOv11 (object detection & speed estimator) + yolov8 (license plate detection model)
-**RTC**: MediaMTX for WebRTC streaming  
-**Scripts**: Node.js for image/report uploads
-
----
-
-## 📁 Project Structure
-
-```
-roadsense/
-├── backend/               # Laravel backend (API + Auth)
-├── frontend/              # React frontend (Admin/User UI)
-├── yolov11-env/           # Python virtual environment for YOLO
-├── violation_logging/     # Logs & reports vehicle violations
-├── mediamtx.yml           # WebRTC media server config
-├── start_services.sh      # Starts YOLO, Node upload, and WebRTC
-├── stop_services.sh       # Stops all services
-```
-
----
-
-## ⚙️ Setup
+## Setup
 
 **update these files:**
 backend/config/cors.php -> add raspberry pi IP to allowed_origins
@@ -89,7 +62,7 @@ Logs are written to `.log` files silently.
 
 ---
 
-## 👥 User Roles
+## User Roles
 
 | Role  | Access                                                |
 |-------|--------------------------------------------------------|
@@ -98,7 +71,7 @@ Logs are written to `.log` files silently.
 
 ---
 
-## 🌐 API Endpoints (Sample)
+## API Endpoints (Sample)
 
 ### Auth
 - `POST /register`
@@ -118,7 +91,7 @@ Logs are written to `.log` files silently.
 
 ---
 
-## 🔧 Environment (.env.example)
+## Environment (.env.example)
 
 ```
 APP_NAME=RoadSense
@@ -137,18 +110,3 @@ DB_PASSWORD=<your_password>
 SANCTUM_STATEFUL_DOMAINS=localhost:3000
 SESSION_DOMAIN=localhost
 ```
-
----
-
-## 🛠 Troubleshooting
-
-- `composer install` fails → ensure PHP >= 8.3 and MongoDB PHP extension installed
-- Laravel 500 error → check `.env` DB credentials or run `php artisan key:generate`
-- Port conflicts → update WebRTC or Laravel port configs as needed
-
----
-
-## 🚧 Disclaimer
-
-This system is currently under active development and intended for demo and testing purposes only. It is not yet ready for production use. Features and functionalities may change without notice.
-
