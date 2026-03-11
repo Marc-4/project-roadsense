@@ -56,11 +56,7 @@ node upload_report.js
 mediamtx
 ```
 
----
-
-Logs are written to `.log` files silently.
-
----
+> Logs are written to `.log` files silently.
 
 ## User Roles
 
@@ -68,8 +64,6 @@ Logs are written to `.log` files silently.
 |-------|--------------------------------------------------------|
 | Admin | Full dashboard access, manage users, view violations  |
 | User  | Limited access, view personal violations only         |
-
----
 
 ## API Endpoints (Sample)
 
@@ -88,8 +82,6 @@ Logs are written to `.log` files silently.
 - `POST /violations`
 - `PUT /violations/{id}`
 - `DELETE /violations/{id}`
-
----
 
 ## Environment (.env.example)
 
