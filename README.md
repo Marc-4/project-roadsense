@@ -1,11 +1,11 @@
 # RoadSense System
 
 An AI-powered road monitoring and violation tracking system using YOLO for vehicle detection and Laravel + React + MongoDB for real-time data logging and user interface.
----
 
 ## Setup
 
 **update these files:**
+
 backend/config/cors.php -> add raspberry pi IP to allowed_origins
 
 mediamtx.yml -> add camera IP to paths:cam:source
